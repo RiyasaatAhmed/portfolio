@@ -1,18 +1,21 @@
 export function About() {
   return (
-    <section className="py-20">
+    <section id="about" className="py-20 bg-background/50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">About Me</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            I&apos;m a passionate developer focused on creating beautiful and
-            functional web experiences. With expertise in modern technologies
-            like React, TypeScript, and Next.js, I bring ideas to life through
-            clean code and thoughtful design.
+            Frontend developer with 4+ years of remote experience delivering
+            scalable, high-performance web applications for US and EU companies.
+            Skilled in TypeScript, React, and Next.js, with a focus on clean,
+            user-centric solutions.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Next.js", "React", "TypeScript", "Tailwind CSS"].map((tech) => (
-              <div key={tech} className="p-4 bg-muted rounded-lg">
+          <div className="flex flex-wrap justify-center gap-8">
+            {["TypeScript", "React", "Next.js"].map((tech) => (
+              <div
+                key={tech}
+                className="p-4 bg-muted rounded-lg grid-background"
+              >
                 <span className="font-medium">{tech}</span>
               </div>
             ))}

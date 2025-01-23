@@ -6,23 +6,39 @@ import { Moon, Sun } from "lucide-react";
 import { Button } from "../ui/button";
 
 export function ThemeButton() {
-  const { setTheme, theme } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
+  const { setTheme, theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  // Avoid server-client rendering mismatch
-  useEffect(() => setIsMounted(true), []);
+  // Handle initial mount to prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+    // Set initial theme based on system preference if not explicitly set
+    if (!theme) {
+      setTheme(systemTheme || "light");
+    }
+  }, [setTheme, systemTheme, theme]);
 
-  if (!isMounted) return null;
+  // Don't render anything until mounted to prevent flash
+  if (!mounted) {
+    return null;
+  }
 
-  const isDarkMode = theme === "dark";
+  const isDark = theme === "dark";
+  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
 
   return (
     <Button
-      onClick={() => setTheme(isDarkMode ? "light" : "dark")}
-      aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
-      className="bg-transparent hover:bg-transparent text-primary"
+      onClick={toggleTheme}
+      aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
+      variant="ghost"
+      size="icon"
+      className="rounded-full"
     >
-      {isDarkMode ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
+      {isDark ? (
+        <Sun className="h-5 w-5 transition-all" />
+      ) : (
+        <Moon className="h-5 w-5 transition-all" />
+      )}
     </Button>
   );
 }

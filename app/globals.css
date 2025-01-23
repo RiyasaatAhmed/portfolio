@@ -79,6 +79,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    width: 100%;
   }
 }
 
@@ -97,4 +99,21 @@
 .animate-gradient {
   background-size: 200% auto;
   animation: gradient 8s ease infinite;
+}
+
+.grid-background {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+      linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 48px 96px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }

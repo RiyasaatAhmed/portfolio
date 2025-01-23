@@ -5,6 +5,7 @@ import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { Projects } from "@/components/projects";
 import { About } from "@/components/about";
+import { Experience } from "@/components/experience";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
@@ -17,11 +18,14 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Projects Section */}
-      <Projects />
-
       {/* About Section */}
       <About />
+
+      {/* Experience Section */}
+      <Experience />
+
+      {/* Projects Section */}
+      <Projects />
 
       {/* Contact Section */}
       <Contact />
