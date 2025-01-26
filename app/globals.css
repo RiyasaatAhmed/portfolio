@@ -103,14 +103,22 @@
 
 .grid-background {
   position: relative;
+  z-index: 1;
   &:before {
     content: "";
     position: absolute;
+    z-index: -1;
     inset: 0;
     background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
       linear-gradient(to bottom, #80808012 1px, transparent 1px);
     background-size: 48px 96px;
   }
+}
+
+.text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #3b82f6, #06b6d4, #6366f1);
 }
 
 html {

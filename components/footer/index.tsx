@@ -1,3 +1,5 @@
+import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from "@/constants/urls";
+
 export function Footer() {
   return (
     <footer className="py-8 border-t bg-background/50">
@@ -9,7 +11,7 @@ export function Footer() {
         </p>
         <div className="flex justify-center gap-4 mt-4">
           <a
-            href="https://github.com/RiyasaatAhmed"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
@@ -17,17 +19,14 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/riyasaatahmedrahul/"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
             LinkedIn
           </a>
-          <a
-            href="mailto:riyasaatahmed24@gmail.com"
-            className="hover:underline"
-          >
+          <a href={EMAIL_URL} className="hover:underline">
             Contact
           </a>
         </div>

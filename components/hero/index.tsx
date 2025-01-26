@@ -1,7 +1,18 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Video, FileText } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { DownArrow } from "./down-arrow";
+import Link from "next/link";
+import ViewProjects from "./view-projects";
+import ContactMe from "./contact-me";
+import { StackOverflowIcon } from "../icons/stack-over-flow";
+import {
+  CV_URL,
+  GITHUB_URL,
+  INTRO_VIDEO_URL,
+  LINKEDIN_URL,
+  STACK_OVERFLOW_URL,
+} from "@/constants/urls";
 
 export function Hero() {
   return (
@@ -9,27 +20,41 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left space-y-8">
-            <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-500 animate-gradient">
-              Creative Developer & Designer
+            <h1 className="text-5xl lg:text-6xl font-bold text-gradient animate-gradient">
+              Solution Oriented Developer
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl md:text-2xl text-muted-foreground">
               Crafting beautiful digital experiences with modern technologies
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <Button size="lg">
-                <Mail className="mr-2 h-4 w-4" />
-                Contact Me
-              </Button>
-              <Button variant="outline" size="lg">
-                View Projects
-              </Button>
+              <ContactMe />
+              <ViewProjects />
             </div>
             <div className="flex justify-center md:justify-start gap-4">
               <Button variant="ghost" size="icon">
-                <Github className="h-5 w-5" />
+                <Link target="_blank" href={GITHUB_URL}>
+                  <Github className="h-5 w-5" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="h-5 w-5" />
+                <Link target="_blank" href={LINKEDIN_URL}>
+                  <Linkedin className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link target="_blank" href={STACK_OVERFLOW_URL}>
+                  <StackOverflowIcon className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link target="_blank" href={INTRO_VIDEO_URL}>
+                  <Video className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link target="_blank" href={CV_URL}>
+                  <FileText className="h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -46,7 +71,7 @@ export function Hero() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-500 animate-gradient p-[1px]">
                   <div className="w-full h-full rounded-full bg-background">
                     <Image
-                      src={"/images/profile/black-dp.jpg"}
+                      src={"/images/hero.jpg"}
                       alt="Profile Photo"
                       width={400}
                       height={400}
