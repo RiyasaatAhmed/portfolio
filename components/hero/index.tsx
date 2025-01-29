@@ -76,6 +76,9 @@ export function Hero() {
                       width={400}
                       height={400}
                       className="rounded-full w-full h-full object-cover"
+                      placeholder="blur"
+                      blurDataURL="/images/hero-blur.jpg"
+                      loading="eager"
                     />
                   </div>
                 </div>

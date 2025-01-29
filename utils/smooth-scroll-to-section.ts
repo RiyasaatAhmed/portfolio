@@ -10,7 +10,7 @@ export const smoothScrollToSection = (
 ) => {
   const { behavior = "smooth", offset = 0 } = options;
   const element = document.getElementById(id);
-  console.log(offset);
+
   if (element) {
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.scrollY - offset;
