@@ -12,3 +12,5 @@ export const A_LEON_COMPANY_URL = "http://www.aleoncompany.com/";
 export const RED_MATTER_TECHNOLOGIES_URL =
   "https://www.youtube.com/@redmatterapp6154";
 export const MZ_TECH_CORP_URL = "https://www.mztech.us/";
+export const RECOMMENDATIONS =
+  "https://www.linkedin.com/in/riyasaatahmedrahul/details/recommendations/";

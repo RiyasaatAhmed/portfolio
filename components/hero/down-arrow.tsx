@@ -2,7 +2,7 @@
 
 import { ArrowDown } from "lucide-react";
 import { smoothScrollToSection } from "@/utils/smooth-scroll-to-section";
-import { useScreenType } from "@/hooks/useScreenType";
+import { useScreenType } from "@/hooks/use-screen-type";
 
 export function DownArrow() {
   const screenType = useScreenType();

@@ -6,7 +6,7 @@ import { EMAIL_URL } from "@/constants/urls";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 grid-background">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center">
           <Title title="Get in Touch" />

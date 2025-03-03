@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Riyasaat Ahmed | Frontend Developer & React Expert",
   description:
     "Portfolio of Riyasaat Ahmed, a frontend developer with 4+ years of experience in building scalable, high-performance web solutions using TypeScript, React.js, and Next.js. Specializing in clean code, performance optimization, and Test-Driven Development.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

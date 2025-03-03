@@ -8,6 +8,7 @@ import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { Recommendations } from "@/components/recommendations";
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
 
       {/* Experience Section */}
       <Experience />
+
+      {/* Recommendations Section */}
+      <Recommendations />
 
       {/* Projects Section */}
       <Projects />

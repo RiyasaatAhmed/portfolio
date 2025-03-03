@@ -4,8 +4,9 @@ import { useCallback, useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { ThemeButton } from "../theme-button";
 import { Menu, X } from "lucide-react";
-import { useScreenType } from "@/hooks/useScreenType";
+import { useScreenType } from "@/hooks/use-screen-type";
 import { smoothScrollToSection } from "@/utils/smooth-scroll-to-section";
+import { navbar } from "@/constants/navbar";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,7 +41,7 @@ export function Nav() {
         {/* Desktop Navigation */}
         {screenType !== "mobile" ? (
           <div className="hidden md:flex items-center space-x-6">
-            {["About", "Experience", "Projects", "Contact"].map((item) => (
+            {navbar.map((item) => (
               <Button
                 key={item}
                 variant="ghost"
@@ -85,7 +86,7 @@ export function Nav() {
           `}</style>
           <div className="absolute top-full left-0 w-full h-screen bg-white dark:bg-black shadow-md">
             <div className="flex flex-col items-start space-y-4 p-4">
-              {["About", "Experience", "Projects", "Contact"].map((item) => (
+              {navbar.map((item) => (
                 <Button
                   key={item}
                   variant="ghost"
