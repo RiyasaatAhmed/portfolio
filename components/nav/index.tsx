@@ -34,7 +34,7 @@ export function Nav() {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
-        <div className="text-2xl font-bold text-gradient animate-gradient">
+        <div className="text-2xl xs:text-3xl font-bold text-gradient animate-gradient">
           Riyasaat&apos;s Portfolio
         </div>
 

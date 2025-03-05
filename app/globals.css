@@ -14,13 +14,6 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.4);
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.6);
-  }
 }
 
 @layer base {
@@ -103,6 +96,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+}
+
 .animate-gradient {
   background-size: 200% auto;
   animation: gradient 8s ease infinite;
@@ -126,12 +125,6 @@
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, #3b82f6, #06b6d4, #6366f1);
-}
-
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  overflow-x: hidden;
 }
 
 .scrollbar::-webkit-scrollbar,

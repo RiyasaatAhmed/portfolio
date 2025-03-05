@@ -12,7 +12,7 @@ import { Recommendations } from "@/components/recommendations";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
+    <main className="min-h-screen">
       {/* Navigation */}
       <Nav />
 
