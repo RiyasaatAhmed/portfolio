@@ -32,7 +32,7 @@ export function Nav() {
           : "py-6"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <div className="text-2xl font-bold text-gradient animate-gradient">
           Riyasaat&apos;s Portfolio

@@ -12,6 +12,7 @@ import { Avatar } from "./avatar";
 import { RECOMMENDATIONS } from "@/constants/urls";
 import Link from "next/link";
 import { recommendations } from "@/constants/recommendations";
+import { RecommendationText } from "./recommendation-text";
 
 export function Recommendation() {
   return (
@@ -31,9 +32,7 @@ export function Recommendation() {
                     <span className="text-[12px] sm:text-sm text-center text-gray-400">
                       {position}
                     </span>
-                    <span className="h-[200px] text-sm text-center mt-4 overflow-y-auto">
-                      {recommendation}
-                    </span>
+                    <RecommendationText recommendation={recommendation} />
                     <Link
                       className="mt-auto"
                       target="_blank"
