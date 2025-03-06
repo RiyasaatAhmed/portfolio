@@ -160,3 +160,8 @@ html {
 .scrollbar-dark::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.6);
 }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
