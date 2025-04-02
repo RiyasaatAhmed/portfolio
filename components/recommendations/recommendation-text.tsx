@@ -2,9 +2,10 @@
 
 import { useOS } from "@/hooks/use-os";
 import { useTheme } from "next-themes";
+import { ReactNode } from "react";
 
 interface RecommendationTextProps {
-  recommendation: string;
+  recommendation: ReactNode;
 }
 export function RecommendationText({
   recommendation,
