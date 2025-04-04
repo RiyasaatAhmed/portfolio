@@ -2,16 +2,16 @@
 
 import { smoothScrollToSection } from "@/utils/smooth-scroll-to-section";
 import { Button } from "../ui/button";
-import { Mail } from "lucide-react";
+import { Medal } from "lucide-react";
 
-export default function ContactMe() {
+export default function HireMe() {
   return (
     <Button
       size="lg"
       onClick={() => smoothScrollToSection("contact", { offset: 72 })}
     >
-      <Mail className="mr-2 h-4 w-4" />
-      Contact Me
+      <Medal className="mr-2 h-4 w-4" />
+      Hire Me!
     </Button>
   );
 }

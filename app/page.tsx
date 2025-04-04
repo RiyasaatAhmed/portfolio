@@ -28,6 +28,9 @@ export default function Home() {
       {/* Recommendations Section */}
       <Recommendations />
 
+      {/* Projects */}
+      <Projects />
+
       {/* Contact Section */}
       <Contact />
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { DownArrow } from "./down-arrow";
 import Link from "next/link";
 import ViewProjects from "./view-projects";
-import ContactMe from "./contact-me";
+import HireMe from "./hire-me";
 import { StackOverflowIcon } from "../icons/stack-over-flow";
 import {
   CV_URL,
@@ -27,7 +27,7 @@ export function Hero() {
               Crafting beautiful digital experiences with modern technologies
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <ContactMe />
+              <HireMe />
               <ViewProjects />
             </div>
             <div className="flex justify-center md:justify-start gap-4">
