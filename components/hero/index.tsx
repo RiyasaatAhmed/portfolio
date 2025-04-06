@@ -3,7 +3,6 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { DownArrow } from "./down-arrow";
 import Link from "next/link";
-import ViewProjects from "./view-projects";
 import HireMe from "./hire-me";
 import { StackOverflowIcon } from "../icons/stack-over-flow";
 import {
@@ -13,6 +12,8 @@ import {
   LINKEDIN_URL,
   STACK_OVERFLOW_URL,
 } from "@/constants/urls";
+import { Text } from "./text";
+import { Magnet } from "../ui/magnet";
 
 export function Hero() {
   return (
@@ -20,22 +21,22 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left space-y-8">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gradient animate-gradient">
-              Solution Oriented Developer
-            </h1>
+            <Text />
             <p className="text-xl md:text-2xl text-muted-foreground">
               Crafting beautiful digital experiences with modern technologies
             </p>
-            <div className="flex justify-center md:justify-start gap-4">
+
+            <Magnet padding={5} disabled={false} magnetStrength={5}>
               <HireMe />
-              <ViewProjects />
-            </div>
+            </Magnet>
+
             <div className="flex justify-center md:justify-start gap-4">
               <Button variant="ghost" size="icon">
                 <Link target="_blank" href={GITHUB_URL}>
                   <Github className="h-5 w-5" />
                 </Link>
               </Button>
+
               <Button variant="ghost" size="icon">
                 <Link target="_blank" href={LINKEDIN_URL}>
                   <Linkedin className="h-5 w-5" />
