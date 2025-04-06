@@ -1,8 +1,8 @@
 import { Button } from "../ui/button";
-import { Card } from "../ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as LinkIcon, Github } from "lucide-react";
+import { MagicCard } from "../magicui/magic-card";
 
 interface ProjectProps {
   thumbnail: string;
@@ -14,7 +14,7 @@ interface ProjectProps {
 
 export function Project(project: ProjectProps) {
   return (
-    <Card className="p-6 hover:shadow-lg transition-shadow">
+    <MagicCard className="p-6 hover:shadow-lg transition-shadow">
       <div className="aspect-video bg-muted rounded-lg mb-4">
         <Image
           src={project.thumbnail}
@@ -49,6 +49,6 @@ export function Project(project: ProjectProps) {
           </Link>
         ) : null}
       </div>
-    </Card>
+    </MagicCard>
   );
 }

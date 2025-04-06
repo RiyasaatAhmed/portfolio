@@ -115,8 +115,7 @@ export const recommendations = [
   },
   {
     name: "MD Rubaith Adnan",
-    position:
-      "Fullstack Developer | React | Node | Javascript | Typescript | Postgres",
+    position: "Fullstack Developer | React | Node | Javascript | Typescript",
     image: "/images/recommendations/md-rubaith-adnan.jpeg",
     recommendation: (
       <article>

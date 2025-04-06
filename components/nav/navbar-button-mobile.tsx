@@ -1,4 +1,4 @@
-import { useScreenType } from "@/hooks/use-screen-type";
+import { useIsMobileScreen } from "@/hooks/use-is-mobile-screen";
 import { Menu, X } from "lucide-react";
 
 interface NavbarButtonMobileProps {
@@ -9,24 +9,22 @@ export function NavbarButtonMobile({
   isNavbarMobileOpen,
   toggleNavbarMobileMenu,
 }: NavbarButtonMobileProps) {
-  const screenType = useScreenType();
+  const isMobileScreen = useIsMobileScreen();
 
-  if (screenType === "mobile") {
-    return (
-      <button
-        onClick={toggleNavbarMobileMenu}
-        aria-label={isNavbarMobileOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isNavbarMobileOpen}
-        className="focus:outline-none"
-      >
-        {isNavbarMobileOpen ? (
-          <X className="h-6 w-6 text-primary" aria-hidden="true" />
-        ) : (
-          <Menu className="h-6 w-6 text-primary" aria-hidden="true" />
-        )}
-      </button>
-    );
-  }
+  if (!isMobileScreen) return null;
 
-  return null;
+  return (
+    <button
+      onClick={toggleNavbarMobileMenu}
+      aria-label={isNavbarMobileOpen ? "Close menu" : "Open menu"}
+      aria-expanded={isNavbarMobileOpen}
+      className="focus:outline-none"
+    >
+      {isNavbarMobileOpen ? (
+        <X className="h-6 w-6 text-primary" aria-hidden="true" />
+      ) : (
+        <Menu className="h-6 w-6 text-primary" aria-hidden="true" />
+      )}
+    </button>
+  );
 }

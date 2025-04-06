@@ -13,6 +13,8 @@ import { RECOMMENDATIONS } from "@/constants/urls";
 import Link from "next/link";
 import { recommendations } from "@/constants/recommendations";
 import { RecommendationText } from "./recommendation-text";
+import { MagicCard } from "../magicui/magic-card";
+import { useTheme } from "next-themes";
 
 export function Recommendation() {
   return (
@@ -26,21 +28,23 @@ export function Recommendation() {
             <CarouselItem key={index}>
               <div className="p-1">
                 <Card className="h-[500px]">
-                  <CardContent className="h-full flex flex-col items-center p-6">
-                    <Avatar src={image} />
-                    <span className="text-xl sm:text-3xl">{name}</span>
-                    <span className="text-[12px] sm:text-sm text-center text-gray-400">
-                      {position}
-                    </span>
-                    <RecommendationText recommendation={recommendation} />
-                    <Link
-                      className="mt-auto"
-                      target="_blank"
-                      href={RECOMMENDATIONS}
-                    >
-                      <Button>See all</Button>
-                    </Link>
-                  </CardContent>
+                  <MagicCard className="h-[100%]">
+                    <CardContent className="h-full flex flex-col items-center p-6">
+                      <Avatar src={image} />
+                      <span className="text-xl sm:text-3xl">{name}</span>
+                      <span className="text-[12px] sm:text-sm text-center text-gray-400">
+                        {position}
+                      </span>
+                      <RecommendationText recommendation={recommendation} />
+                      <Link
+                        className="mt-auto"
+                        target="_blank"
+                        href={RECOMMENDATIONS}
+                      >
+                        <Button>See all</Button>
+                      </Link>
+                    </CardContent>
+                  </MagicCard>
                 </Card>
               </div>
             </CarouselItem>

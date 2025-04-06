@@ -9,6 +9,7 @@ import { Experience } from "@/components/experience";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { Recommendations } from "@/components/recommendations";
+import { Skills } from "@/components/skills";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
 
       {/* About Section */}
       <About />
+
+      {/* Skills */}
+      <Skills />
 
       {/* Experience Section */}
       <Experience />

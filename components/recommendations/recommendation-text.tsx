@@ -15,7 +15,7 @@ export function RecommendationText({
 
   return (
     <span
-      className={`h-[200px] text-sm text-center mt-4 overflow-y-auto  ${
+      className={`h-[200px] text-sm text-center mt-4 mb-4 overflow-y-auto  ${
         os === "Windows"
           ? `${theme === "dark" ? "scrollbar-dark" : "scrollbar"}`
           : ""

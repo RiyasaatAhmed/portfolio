@@ -8,9 +8,9 @@ export default function ViewProjects() {
     <Button
       variant="outline"
       size="lg"
-      onClick={() => smoothScrollToSection("recommendations", { offset: 72 })}
+      onClick={() => smoothScrollToSection("projects", { offset: 72 })}
     >
-      View Recommendations
+      View Projects
     </Button>
   );
 }

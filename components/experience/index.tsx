@@ -1,21 +1,21 @@
-import { Card } from "@/components/ui/card";
+"use client";
+
 import Link from "next/link";
 import { experiences } from "../../constants/experiences";
 import { Title } from "../title";
+import { Container } from "../container";
+import { MagicCard } from "../magicui/magic-card";
 
 export function Experience() {
   return (
-    <section
-      id="experience"
-      className="container py-20 mx-auto grid-background"
-    >
+    <Container id="experience">
       <Title title="Work Experience" />
 
       <div className="grid gap-8 md:gap-12 justify-center">
         {experiences.map((experience, index) => (
-          <Card
+          <MagicCard
             key={index}
-            className="p-6 w-4/5 m-auto md:w-[750px] shadow-2xl transition-shadow"
+            className="p-6 w-full sm:w-4/5 m-auto md:w-[750px] shadow-2xl transition-shadow"
           >
             <div className="flex flex-col gap-4">
               <div>
@@ -39,9 +39,9 @@ export function Experience() {
                 ))}
               </ul>
             </div>
-          </Card>
+          </MagicCard>
         ))}
       </div>
-    </section>
+    </Container>
   );
 }

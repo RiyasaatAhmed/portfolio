@@ -1,17 +1,17 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useScreenType } from "@/hooks/use-screen-type";
 import { ScrollProgressBar } from "./scroll-progress-bar";
 import { NavbarDesktop } from "./navbar-desktop";
 import { NavbarButtonMobile } from "./navbar-button-mobile";
 import { NavbarMobile } from "./navbar-mobile";
+import { useIsMobileScreen } from "@/hooks/use-is-mobile-screen";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [isNavbarMobileOpen, setIsNavbarMobileOpen] = useState(false);
-  const screenType = useScreenType();
   const [width, setWidth] = useState("0%");
+  const isMobileScreen = useIsMobileScreen();
 
   // Toggle navbar mobile menu
   const toggleNavbarMobileMenu = useCallback(() => {
@@ -30,7 +30,7 @@ export function Nav() {
     <header className="fixed w-full top-0 left-0 z-50">
       <nav
         className={`transition-all duration-300 ${
-          scrolled || (isNavbarMobileOpen && screenType === "mobile")
+          scrolled || (isNavbarMobileOpen && isMobileScreen)
             ? `${
                 isNavbarMobileOpen
                   ? "bg-white dark:bg-black"

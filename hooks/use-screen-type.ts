@@ -9,9 +9,9 @@ export function useScreenType(): ScreenType {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      if (width <= 900) {
+      if (width < 900) {
         setScreenType("mobile");
-      } else if (width > 900 && width < 1024) {
+      } else if (width >= 900 && width < 1024) {
         setScreenType("tablet");
       } else if (width >= 1024 && width < 1536) {
         setScreenType("desktop");
