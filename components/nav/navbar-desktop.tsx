@@ -1,5 +1,4 @@
 import { navbar } from "@/constants/navbar";
-import { useScreenType } from "@/hooks/use-screen-type";
 import { Button } from "../ui/button";
 import { smoothScrollToSection } from "@/utils/smooth-scroll-to-section";
 import { ThemeButton } from "../theme-button";

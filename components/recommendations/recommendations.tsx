@@ -14,7 +14,6 @@ import Link from "next/link";
 import { recommendations } from "@/constants/recommendations";
 import { RecommendationText } from "./recommendation-text";
 import { MagicCard } from "../magicui/magic-card";
-import { useTheme } from "next-themes";
 
 export function Recommendation() {
   return (

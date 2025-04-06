@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, ReactNode, useId } from "react";
+import React, { useEffect, useState, ReactNode } from "react";
 import {
   Cloud,
   renderSimpleIcon,
@@ -46,6 +46,19 @@ const slugs: string[] = [
   "css3",
   "nodedotjs",
   "express",
+  "mongodb",
+  "mongoose",
+  "reactrouter",
+  "reactbootstrap",
+  "reactquery",
+  "reactos",
+  "reacttable",
+  "reacthookform",
+  "zod",
+  "redux",
+  "xstate",
+  "recoil",
+  "mobx",
   "prisma",
   "postgresql",
   "vercel",
@@ -55,6 +68,25 @@ const slugs: string[] = [
   "git",
   "jira",
   "github",
+  "jest",
+  "nestjs",
+  "python",
+  "styledcomponents",
+  "tailwindcss",
+  "shadcnui",
+  "mui",
+  "stackoverflow",
+  "graphql",
+  "apollographql",
+  "langchain",
+  "openai",
+  "ollama",
+  "google",
+  "googlegemini",
+  "chakraui",
+  "claude",
+  "amazonecs",
+  "linux",
 ];
 
 export const IconCloud: React.FC = () => {
