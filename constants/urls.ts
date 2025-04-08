@@ -11,7 +11,7 @@ export const RECOMMENDATIONS =
 export const INTRO_VIDEO_URL =
   "https://www.loom.com/share/50412a464ba64e98a3e0d95f165a7173";
 export const CV_URL =
-  "https://drive.google.com/file/d/1-GIIlwNl3t661KpLMz_cwSCvv5zvYPxs/view?usp=sharing";
+  "https://drive.google.com/file/d/17aoIqlG7snY7LBcKXg3RyYgObbubDe8X/view";
 
 // Companies
 export const POOL_OFFICE_MANAGER_URL = "https://poolofficemanager.com/";
