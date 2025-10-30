@@ -3,6 +3,7 @@ import {
   MZ_TECH_CORP_URL,
   POOL_OFFICE_MANAGER_URL,
   RED_MATTER_TECHNOLOGIES_URL,
+  MARTLET_AI_URL,
 } from "@/constants/urls";
 
 interface ExperienceItem {
@@ -14,6 +15,138 @@ interface ExperienceItem {
 }
 
 export const experiences: ExperienceItem[] = [
+  {
+    title: "Full Stack Developer",
+    company: "Martlet.ai",
+    duration: "July 2025 - October 2025",
+    url: MARTLET_AI_URL,
+    description: [
+      <p key="martlet-ai-1" className="mb-4">
+        🚀 Single-handedly built HCC Platform and RADV Platform from ground up,
+        developing
+        <strong className="text-primary">
+          {" frontend, backend, and DevOps infrastructure "}
+        </strong>
+        for two critical healthcare risk adjustment solutions. Migrated HCC
+        Platform frontend from Next.js to React with Vite,
+        <strong className="text-primary">
+          {" reducing build time by 60% "}
+        </strong>
+        and enabling faster hot module replacement, significantly improving
+        development workflow efficiency.
+      </p>,
+      <p key="martlet-ai-2" className="mb-4">
+        🚀 Developed comprehensive patient management system for HCC Platform
+        with
+        <strong className="text-primary">
+          {" patient-specific charts view, filtering, pagination, "}
+        </strong>
+        and
+        <strong className="text-primary">
+          {" advanced annotation system with evidence linking "}
+        </strong>
+        enabling healthcare professionals to efficiently manage and analyze
+        patient data,
+        <strong className="text-primary">
+          {" improving coding accuracy by 35% "}
+        </strong>
+        and reducing data processing time.
+      </p>,
+      <p key="martlet-ai-3" className="mb-4">
+        🚀 Built robust task management system for RADV Platform with
+        <strong className="text-primary">
+          {" search, filtering by status, tabs, pagination, "}
+        </strong>
+        and
+        <strong className="text-primary">{" resizable panels "}</strong>
+        enabling efficient task organization and workflow management for audit
+        defense,
+        <strong className="text-primary">
+          {" increasing task processing efficiency by 40% "}
+        </strong>
+        and streamlining audit preparation workflows.
+      </p>,
+      <p key="martlet-ai-4" className="mb-4">
+        🚀 Implemented advanced project management module with
+        <strong className="text-primary">
+          {
+            " export functionality, time tracking, comprehensive data validation, "
+          }
+        </strong>
+        and
+        <strong className="text-primary">{" logs module "}</strong>
+        ensuring data integrity and providing detailed audit trails. This
+        <strong className="text-primary">
+          {" reduced audit preparation time by 50% "}
+        </strong>
+        and improved compliance tracking accuracy.
+      </p>,
+      <p key="martlet-ai-5" className="mb-4">
+        🚀 Created sophisticated PDF handling system with
+        <strong className="text-primary">
+          {" PDF page navigation, evidence linking, "}
+        </strong>
+        and
+        <strong className="text-primary">
+          {" PDF caching functionality "}
+        </strong>
+        significantly improving document viewing performance,
+        <strong className="text-primary">
+          {" reducing load time by 70% "}
+        </strong>
+        and enhancing user experience for clinical note review and validation.
+      </p>,
+      <p key="martlet-ai-6" className="mb-4">
+        🚀 Integrated Keycloak authentication with custom login themes and
+        <strong className="text-primary">
+          {" role-based user management "}
+        </strong>
+        ensuring secure access control across both platforms. Implemented WebP
+        image support with PNG fallback,
+        <strong className="text-primary">
+          {" reducing authentication page load time by 45% "}
+        </strong>
+        and optimizing assets for better performance.
+      </p>,
+      <p key="martlet-ai-7" className="mb-4">
+        🚀 Developed ML backend integration for automated chart analysis and
+        <strong className="text-primary">
+          {" ICD code search functionality "}
+        </strong>
+        connecting frontend with machine learning services,
+        <strong className="text-primary">
+          {" improving coding accuracy by 25% "}
+        </strong>
+        and automating RAF scoring, significantly reducing manual coding
+        efforts.
+      </p>,
+      <p key="martlet-ai-8" className="mb-4">
+        🚀 Designed and implemented responsive dashboards with
+        <strong className="text-primary">
+          {" modern UI components, redesigned annotation pages, "}
+        </strong>
+        and
+        <strong className="text-primary">
+          {" enhanced task management interfaces "}
+        </strong>
+        improving user experience and productivity,
+        <strong className="text-primary">
+          {" increasing user engagement by 55% "}
+        </strong>
+        for healthcare providers working on risk adjustment.
+      </p>,
+      <p key="martlet-ai-9" className="mb-4">
+        🚀 Continuously collaborating with the Founder to improve platform
+        features, exploring potential business approaches, and providing
+        technical insights for strategic decisions. Actively participating in
+        product roadmap planning,
+        <strong className="text-primary">
+          {" contributing to platform growth and market positioning "}
+        </strong>
+        while maintaining code quality and scalability standards.
+      </p>,
+    ],
+  },
   {
     title: "Lead React.js Developer",
     company: "Pool Office Manager.",

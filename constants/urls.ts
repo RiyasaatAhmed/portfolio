@@ -19,6 +19,7 @@ export const A_LEON_COMPANY_URL = "http://www.aleoncompany.com/";
 export const RED_MATTER_TECHNOLOGIES_URL =
   "https://www.youtube.com/@redmatterapp6154";
 export const MZ_TECH_CORP_URL = "https://www.mztech.us/";
+export const MARTLET_AI_URL = "https://martlet.ai/";
 
 // Projects
 export const XENO_WULF = "https://www.xenowulf.com/";
@@ -28,5 +29,7 @@ export const ON_CALL_PUBLIC_ADJUSTERS =
 export const SPEED_DIVISION = "https://speeddivision.com/";
 export const PORTFOLIO = "https://riyasaat-ahmed-rahul.vercel.app/";
 
-// Reporsitories
+// Repositories
 export const PORTFOLIO_GITHUB = "https://github.com/RiyasaatAhmed/portfolio";
+export const HCC_PLATFORM_URL = "https://github.com/hcc-platform";
+export const RADV_PLATFORM_URL = "https://github.com/radv-platform";
