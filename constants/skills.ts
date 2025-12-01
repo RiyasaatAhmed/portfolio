@@ -3,11 +3,22 @@ export const MAIN_STRENGTHS = ["TypeScript", "React.js", "Next.js"];
 export const SKILLS = [
   {
     title: "Main strengths",
-    skills: MAIN_STRENGTHS,
+    skills: [...MAIN_STRENGTHS, "Coding Agents(Cursor)"],
   },
   {
     title: "Can comfortably contribute",
-    skills: ["React Native", "Express", "REST API", "Mongoose"],
+    skills: [
+      "React Native",
+      "Express",
+      "REST API",
+      "Python",
+      "FastAPI",
+      "Supabase",
+      "LLM-powered systems",
+      "Cursor Rules and Command-driven workflows",
+      "Context Engineering",
+      "Prompt Engineering",
+    ],
   },
   {
     title: "State management",
@@ -38,10 +49,24 @@ export const SKILLS = [
   },
   {
     title: "Syling",
-    skills: ["Tailwind CSS", "ShadCN", "Styled Components", "Material UI"],
+    skills: [
+      "CSS",
+      "SCSS",
+      "CSS Modules",
+      "Tailwind CSS",
+      "ShadCN",
+      "Styled Components",
+      "Material UI",
+      "Chakra UI",
+      "Bootstrap",
+      "Ant Design",
+      "Semantic UI",
+      "Bulma",
+      "Foundation",
+    ],
   },
   {
     title: "Testing",
-    skills: ["Jest", "React Testing Library"],
+    skills: ["Jest", "React Testing Library", "Playwright", "Cypress"],
   },
 ];

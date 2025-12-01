@@ -13,10 +13,20 @@ export function About() {
       <div className="max-w-3xl mx-auto text-center">
         <Title title="About Me" />
         <p className="text-lg text-muted-foreground mb-8">
-          Frontend developer with 4+ years of remote experience delivering
-          scalable, high-performance web applications for US and EU companies.
-          Skilled in TypeScript, React, and Next.js, with a focus on clean,
-          user-centric solutions.
+          Frontend Developer with 5+ years of remote experience delivering
+          scalable, high-performance applications for US and EU companies. I
+          specialize in TypeScript, React, and Next.js—building clean,
+          intuitive, and user-centric interfaces with a strong emphasis on
+          performance and maintainability.
+          <br />
+          <br />
+          Beyond the frontend, I’m comfortable working with Python, FastAPI,
+          Supabase, and LLM-powered systems. I design effective prompts, build
+          intelligent AI workflows, and apply strong context-engineering
+          principles to get the most out of modern coding agents. Leveraging
+          tools like Cursor, I convert ideas into production-ready code with
+          exceptional speed and precision through optimized rules and
+          command-driven workflows.
         </p>
         <div className="flex flex-wrap justify-center gap-8 mb-8">
           {MAIN_STRENGTHS.map((tech) => (

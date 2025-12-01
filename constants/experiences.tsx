@@ -18,7 +18,7 @@ export const experiences: ExperienceItem[] = [
   {
     title: "Full Stack Developer",
     company: "Martlet.ai",
-    duration: "July 2025 - October 2025",
+    duration: "May 2025 - Present",
     url: MARTLET_AI_URL,
     description: [
       <p key="martlet-ai-1" className="mb-4">
@@ -150,7 +150,7 @@ export const experiences: ExperienceItem[] = [
   {
     title: "Lead React.js Developer",
     company: "Pool Office Manager.",
-    duration: "January 2023 - Present",
+    duration: "January 2023 - April 2025",
     url: POOL_OFFICE_MANAGER_URL,
     description: [
       <p key="pool-office-manager-1" className="mb-4">

@@ -87,6 +87,9 @@ const slugs: string[] = [
   "claude",
   "amazonecs",
   "linux",
+  "fastapi",
+  "supabase",
+  "llm",
 ];
 
 export const IconCloud: React.FC = () => {
