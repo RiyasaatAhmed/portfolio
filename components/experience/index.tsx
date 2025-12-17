@@ -25,6 +25,7 @@ export function Experience() {
                     href={experience.url}
                     target="_blank"
                     className="text-muted-foreground underline"
+                    aria-label={`Visit ${experience.company} website`}
                   >
                     {experience.company}
                   </Link>

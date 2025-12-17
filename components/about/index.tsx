@@ -33,11 +33,12 @@ export function About() {
             <Badge key={tech} skill={tech} />
           ))}
         </div>
-        <Button size="lg">
+        <Button size="lg" asChild>
           <Link
             href={INTRO_VIDEO_URL}
             target="_blank"
             className="flex justify-center items-center"
+            aria-label="Watch Intro Video"
           >
             <Video className="mr-2 h-4 w-4" />
             Intro Video

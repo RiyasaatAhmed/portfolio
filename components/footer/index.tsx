@@ -1,4 +1,5 @@
 import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from "@/constants/urls";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -10,25 +11,25 @@ export function Footer() {
           Next.js, and TypeScript.
         </p>
         <div className="flex justify-center gap-4 mt-4">
-          <a
+          <Link
             href={GITHUB_URL}
             target="_blank"
-            rel="noopener noreferrer"
             className="hover:underline"
+            aria-label="Visit GitHub Profile"
           >
             GitHub
-          </a>
-          <a
+          </Link>
+          <Link
             href={LINKEDIN_URL}
             target="_blank"
-            rel="noopener noreferrer"
             className="hover:underline"
+            aria-label="Visit LinkedIn Profile"
           >
             LinkedIn
-          </a>
-          <a href={EMAIL_URL} className="hover:underline">
+          </Link>
+          <Link href={EMAIL_URL} className="hover:underline" aria-label="Send Email">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

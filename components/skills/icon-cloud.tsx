@@ -27,14 +27,20 @@ const useIcons = (slugs: string[]): ReactNode => {
         icon,
         size: 80,
         aProps: {
-          onClick: (e: React.MouseEvent<HTMLAnchorElement>) =>
-            e.preventDefault(),
+          href: `https://www.google.com/search?q=${encodeURIComponent(
+            icon.title
+          )}`,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          onClick: (e: any) => e.preventDefault(),
+          style: { cursor: "default" },
+          "aria-label": icon.title,
         },
       })
     );
   }
 
-  return <a>Loading</a>;
+  return <p>Loading</p>;
 };
 
 const slugs: string[] = [
@@ -82,14 +88,11 @@ const slugs: string[] = [
   "openai",
   "ollama",
   "google",
-  "googlegemini",
   "chakraui",
-  "claude",
   "amazonecs",
   "linux",
   "fastapi",
   "supabase",
-  "llm",
 ];
 
 export const IconCloud: React.FC = () => {

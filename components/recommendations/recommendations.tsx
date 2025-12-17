@@ -35,13 +35,16 @@ export function Recommendation() {
                         {position}
                       </span>
                       <RecommendationText recommendation={recommendation} />
-                      <Link
-                        className="mt-auto"
-                        target="_blank"
-                        href={RECOMMENDATIONS}
-                      >
-                        <Button>See all</Button>
-                      </Link>
+                        <Button asChild>
+                          <Link
+                            className="mt-auto"
+                            target="_blank"
+                            href={RECOMMENDATIONS}
+                            aria-label="See all recommendations on LinkedIn"
+                          >
+                            See all
+                          </Link>
+                        </Button>
                     </CardContent>
                   </MagicCard>
                 </Card>
