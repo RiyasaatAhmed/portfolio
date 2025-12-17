@@ -18,11 +18,11 @@ export function Project(project: ProjectProps) {
       <div className="aspect-video bg-muted rounded-lg mb-4">
         <Image
           src={project.thumbnail}
-          alt="Profile Photo"
+          alt={`${project.title} preview`}
           width={350}
           height={200}
           className="w-full h-full object-contain"
-          loading="eager"
+          // loading="lazy" is default
         />
       </div>
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -32,21 +32,21 @@ export function Project(project: ProjectProps) {
 
       <div className="flex justify-center align-middle gap-4">
         {project.githubUrl ? (
-          <Link target="_blank" href={project.githubUrl}>
-            <Button variant="outline">
+          <Button variant="outline" asChild>
+            <Link target="_blank" href={project.githubUrl} aria-label={`View ${project.title} on GitHub`}>
               <Github className="mr-2 h-4 w-4" />
               Github
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         ) : null}
 
         {project?.liveUrl ? (
-          <Link target="_blank" href={project.liveUrl}>
-            <Button variant="outline">
+          <Button variant="outline" asChild>
+            <Link target="_blank" href={project.liveUrl} aria-label={`View ${project.title} Live Demo`}>
               <LinkIcon className="mr-2 h-4 w-4" />
               View
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         ) : null}
       </div>
     </MagicCard>

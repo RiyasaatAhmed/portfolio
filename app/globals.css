@@ -150,8 +150,7 @@ html {
   border-radius: 10px;
 }
 
-.scrollbar::-webkit-scrollbar-thumb:hover
-  .scrollbar-dark::-webkit-scrollbar-thumb:hover {
+.scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.6);
 }
 

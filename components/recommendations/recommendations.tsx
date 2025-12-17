@@ -29,7 +29,7 @@ export function Recommendation() {
                 <Card className="h-[500px]">
                   <MagicCard className="h-[100%]">
                     <CardContent className="h-full flex flex-col items-center p-6">
-                      <Avatar src={image} />
+                      <Avatar src={image} name={name} />
                       <span className="text-xl sm:text-3xl">{name}</span>
                       <span className="text-[12px] sm:text-sm text-center text-gray-400">
                         {position}

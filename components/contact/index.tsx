@@ -14,12 +14,12 @@ export function Contact() {
           Interested in working together? Let&apos;s connect and discuss your
           next project.
         </p>
-        <Link href={EMAIL_URL}>
-          <Button size="lg" className="w-full sm:w-auto">
+        <Button size="lg" className="w-full sm:w-auto" asChild>
+          <Link href={EMAIL_URL}>
             <Mail className="mr-2 h-4 w-4" />
             Send Message
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
     </Container>
   );

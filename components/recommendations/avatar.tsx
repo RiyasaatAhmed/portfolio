@@ -2,9 +2,10 @@ import Image from "next/image";
 
 interface AvatarProps {
   src: string;
+  name: string;
 }
 
-export function Avatar({ src }: AvatarProps) {
+export function Avatar({ src, name }: AvatarProps) {
   return (
     <div className="w-[100px] h-[100px] relative mx-auto my-2">
       <div className="group relative w-full h-full">
@@ -12,11 +13,11 @@ export function Avatar({ src }: AvatarProps) {
           <div className="w-full h-full rounded-full bg-background">
             <Image
               src={src}
-              alt="Profile Photo"
+              alt={`${name} Avatar`}
               width={60}
               height={60}
               className="rounded-full w-full h-full object-cover"
-              loading="eager"
+              // loading="lazy" is default
             />
           </div>
         </div>

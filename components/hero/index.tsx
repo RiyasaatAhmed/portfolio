@@ -31,29 +31,29 @@ export function Hero() {
             </Magnet>
 
             <div className="flex justify-center md:justify-start gap-4">
-              <Button variant="ghost" size="icon">
-                <Link target="_blank" href={GITHUB_URL}>
+              <Button variant="ghost" size="icon" asChild>
+                <Link target="_blank" href={GITHUB_URL} aria-label="GitHub Profile">
                   <Github className="h-5 w-5" />
                 </Link>
               </Button>
 
-              <Button variant="ghost" size="icon">
-                <Link target="_blank" href={LINKEDIN_URL}>
+              <Button variant="ghost" size="icon" asChild>
+                <Link target="_blank" href={LINKEDIN_URL} aria-label="LinkedIn Profile">
                   <Linkedin className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
-                <Link target="_blank" href={STACK_OVERFLOW_URL}>
+              <Button variant="ghost" size="icon" asChild>
+                <Link target="_blank" href={STACK_OVERFLOW_URL} aria-label="Stack Overflow Profile">
                   <StackOverflowIcon className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
-                <Link target="_blank" href={INTRO_VIDEO_URL}>
+              <Button variant="ghost" size="icon" asChild>
+                <Link target="_blank" href={INTRO_VIDEO_URL} aria-label="Intro Video">
                   <Video className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
-                <Link target="_blank" href={CV_URL}>
+              <Button variant="ghost" size="icon" asChild>
+                <Link target="_blank" href={CV_URL} aria-label="View Resume">
                   <FileText className="h-5 w-5" />
                 </Link>
               </Button>
@@ -73,7 +73,7 @@ export function Hero() {
                   <div className="w-full h-full rounded-full bg-background">
                     <Image
                       src={"/images/hero.jpg"}
-                      alt="Profile Photo"
+                      alt="Riyasaat Ahmed Profile"
                       width={400}
                       height={400}
                       className="rounded-full w-full h-full object-cover"
