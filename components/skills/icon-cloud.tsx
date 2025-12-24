@@ -32,9 +32,9 @@ const useIcons = (slugs: string[]): ReactNode => {
           )}`,
           target: "_blank",
           rel: "noopener noreferrer",
-          onClick: (e: any) => e.preventDefault(),
-          style: { cursor: "default" },
+          onClick: (e) => e.preventDefault(),
           "aria-label": icon.title,
+          tabIndex: -1,
         },
       })
     );

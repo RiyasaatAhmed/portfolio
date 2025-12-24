@@ -6,6 +6,15 @@ import { INTRO_VIDEO_URL } from "@/constants/urls";
 import { Badge } from "../badge";
 import { MAIN_STRENGTHS } from "@/constants/skills";
 import { Container } from "../container";
+import { TypeScriptIcon } from "../icons/typescript";
+import { ReactIcon } from "../icons/react";
+import { NextJsIcon } from "../icons/nextjs";
+
+const SKILL_ICONS: Record<string, React.ReactNode> = {
+  TypeScript: <TypeScriptIcon className="h-5 w-5" />,
+  "React.js": <ReactIcon className="h-5 w-5" />,
+  "Next.js": <NextJsIcon className="h-5 w-5" />,
+};
 
 export function About() {
   return (
@@ -15,7 +24,7 @@ export function About() {
         <p className="text-lg text-muted-foreground mb-8">
           Frontend Developer with 5+ years of remote experience delivering
           scalable, high-performance applications for US and EU companies. I
-          specialize in TypeScript, React, and Next.js—building clean,
+          specialize in TypeScript, React, and Next.js building clean,
           intuitive, and user-centric interfaces with a strong emphasis on
           performance and maintainability.
           <br />
@@ -30,7 +39,7 @@ export function About() {
         </p>
         <div className="flex flex-wrap justify-center gap-8 mb-8">
           {MAIN_STRENGTHS.map((tech) => (
-            <Badge key={tech} skill={tech} />
+            <Badge key={tech} skill={tech} icon={SKILL_ICONS[tech]} />
           ))}
         </div>
         <Button size="lg" asChild>

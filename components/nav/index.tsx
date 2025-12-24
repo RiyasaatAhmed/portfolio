@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import { ScrollProgressBar } from "./scroll-progress-bar";
 import { NavbarDesktop } from "./navbar-desktop";
 import { NavbarButtonMobile } from "./navbar-button-mobile";
@@ -41,9 +42,11 @@ export function Nav() {
       >
         <div className="container mx-auto flex items-center justify-between px-4">
           {/* Logo */}
-          <h1 className="text-2xl xs:text-3xl font-bold text-gradient animate-gradient">
-            Riyasaat&apos;s Portfolio
-          </h1>
+          <Link href="/">
+            <span className="text-2xl xs:text-3xl font-bold text-gradient animate-gradient">
+              Riyasaat&apos;s Portfolio
+            </span>
+          </Link>
 
           {/* Navbar Desktop */}
           <NavbarDesktop />

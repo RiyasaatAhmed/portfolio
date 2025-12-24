@@ -7,15 +7,17 @@ import { useScreenType } from "@/hooks/use-screen-type";
 export function DownArrow() {
   const screenType = useScreenType();
   return (
-    <div className="animate-bounce mt-16">
-      <ArrowDown
-        className="mx-auto h-6 w-6 text-muted-foreground cursor-pointer"
-        onClick={() =>
-          smoothScrollToSection("contact", {
-            offset: screenType === "mobile" ? 64 : 72,
-          })
-        }
-      />
-    </div>
+    <button
+      type="button"
+      aria-label="Scroll to contact section"
+      className="animate-bounce mt-16 motion-reduce:animate-none"
+      onClick={() =>
+        smoothScrollToSection("contact", {
+          offset: screenType === "mobile" ? 64 : 72,
+        })
+      }
+    >
+      <ArrowDown className="mx-auto h-6 w-6 text-muted-foreground" />
+    </button>
   );
 }

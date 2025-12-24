@@ -27,7 +27,7 @@ export const MAX_ECOMMERCE = "https://maxe-frontend.vercel.app/";
 export const ON_CALL_PUBLIC_ADJUSTERS =
   "https://www.oncallpublicadjusters.com/";
 export const SPEED_DIVISION = "https://speeddivision.com/";
-export const PORTFOLIO = "https://riyasaat-ahmed-rahul.vercel.app/";
+export const PORTFOLIO = "https://riyasaat.dev/";
 
 // Repositories
 export const PORTFOLIO_GITHUB = "https://github.com/RiyasaatAhmed/portfolio";

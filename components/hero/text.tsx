@@ -6,7 +6,7 @@ import { useRef } from "react";
 export function Text() {
   const containerRef = useRef(null);
   return (
-    <div ref={containerRef} style={{ position: "relative" }}>
+    <h1 ref={containerRef} style={{ position: "relative" }}>
       <VariableProximity
         label={"Solution Oriented Developer"}
         className={
@@ -18,6 +18,6 @@ export function Text() {
         radius={100}
         falloff="linear"
       />
-    </div>
+    </h1>
   );
 }

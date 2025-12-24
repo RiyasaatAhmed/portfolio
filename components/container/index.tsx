@@ -2,7 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from "react";
 
 interface ContainerProps
   extends PropsWithChildren,
-    DetailedHTMLProps<HTMLAttributes<HTMLSelectElement>, HTMLSelectElement> {}
+    DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {}
 
 export function Container({ children, ...props }: ContainerProps) {
   return (

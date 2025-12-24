@@ -32,28 +32,48 @@ export function Hero() {
 
             <div className="flex justify-center md:justify-start gap-4">
               <Button variant="ghost" size="icon" asChild>
-                <Link target="_blank" href={GITHUB_URL} aria-label="GitHub Profile">
+                <Link
+                  target="_blank"
+                  href={GITHUB_URL}
+                  aria-label="GitHub Profile (opens in new tab)"
+                >
                   <Github className="h-5 w-5" />
                 </Link>
               </Button>
 
               <Button variant="ghost" size="icon" asChild>
-                <Link target="_blank" href={LINKEDIN_URL} aria-label="LinkedIn Profile">
+                <Link
+                  target="_blank"
+                  href={LINKEDIN_URL}
+                  aria-label="LinkedIn Profile (opens in new tab)"
+                >
                   <Linkedin className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link target="_blank" href={STACK_OVERFLOW_URL} aria-label="Stack Overflow Profile">
+                <Link
+                  target="_blank"
+                  href={STACK_OVERFLOW_URL}
+                  aria-label="Stack Overflow Profile (opens in new tab)"
+                >
                   <StackOverflowIcon className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link target="_blank" href={INTRO_VIDEO_URL} aria-label="Intro Video">
+                <Link
+                  target="_blank"
+                  href={INTRO_VIDEO_URL}
+                  aria-label="Intro Video (opens in new tab)"
+                >
                   <Video className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link target="_blank" href={CV_URL} aria-label="View Resume">
+                <Link
+                  target="_blank"
+                  href={CV_URL}
+                  aria-label="View Resume (opens in new tab)"
+                >
                   <FileText className="h-5 w-5" />
                 </Link>
               </Button>
@@ -62,10 +82,10 @@ export function Hero() {
 
           <div className="flex-1 relative">
             <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative mx-auto">
-              <div className="absolute inset-0 rounded-full animate-[spin_10s_linear_infinite]">
+              <div className="absolute inset-0 rounded-full animate-[spin_10s_linear_infinite] motion-reduce:animate-none">
                 <div className="w-full h-full bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-500 rounded-full blur-lg opacity-70"></div>
               </div>
-              <div className="absolute inset-0 rounded-full animate-[spin_15s_linear_infinite] rotate-180">
+              <div className="absolute inset-0 rounded-full animate-[spin_15s_linear_infinite] motion-reduce:animate-none rotate-180">
                 <div className="w-full h-full bg-gradient-to-r from-indigo-500 via-cyan-500 to-blue-500 rounded-full blur-lg opacity-50"></div>
               </div>
               <div className="group relative w-full h-full">
@@ -79,7 +99,7 @@ export function Hero() {
                       className="rounded-full w-full h-full object-cover"
                       placeholder="blur"
                       blurDataURL="/images/hero-blur.jpg"
-                      loading="eager"
+                      priority
                     />
                   </div>
                 </div>

@@ -3,7 +3,7 @@ export const MAIN_STRENGTHS = ["TypeScript", "React.js", "Next.js"];
 export const SKILLS = [
   {
     title: "Main strengths",
-    skills: [...MAIN_STRENGTHS, "Coding Agents(Cursor)"],
+    skills: [...MAIN_STRENGTHS, "Coding Agents(Cursor)", "Context Engineering"],
   },
   {
     title: "Can comfortably contribute",

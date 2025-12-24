@@ -27,7 +27,7 @@ export function Footer() {
           >
             LinkedIn
           </Link>
-          <Link href={EMAIL_URL} className="hover:underline" aria-label="Send Email">
+          <Link href={EMAIL_URL} className="hover:underline" aria-label="Contact via Email">
             Contact
           </Link>
         </div>
