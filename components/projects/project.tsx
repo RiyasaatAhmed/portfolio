@@ -1,15 +1,16 @@
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Link as LinkIcon, Github } from "lucide-react";
+import { Link as LinkIcon, Github, FileText } from "lucide-react";
 import { MagicCard } from "../magicui/magic-card";
 
 interface ProjectProps {
   thumbnail: string;
   title: string;
   description: string;
-  liveUrl?: string;
+  liveUrl: string;
   githubUrl?: string;
+  slug?: string;
 }
 
 export function Project(project: ProjectProps) {
@@ -22,7 +23,6 @@ export function Project(project: ProjectProps) {
           width={350}
           height={200}
           className="w-full h-full object-contain"
-          // loading="lazy" is default
         />
       </div>
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -31,20 +31,42 @@ export function Project(project: ProjectProps) {
       </p>
 
       <div className="flex justify-center align-middle gap-4">
-        {project.githubUrl ? (
+        {/* Live Demo */}
+        {project?.liveUrl ? (
           <Button variant="outline" asChild>
-            <Link target="_blank" href={project.githubUrl} aria-label={`View ${project.title} on GitHub`}>
-              <Github className="mr-2 h-4 w-4" />
-              Github
+            <Link
+              target="_blank"
+              href={project.liveUrl}
+              aria-label={`View ${project.title} Live Demo`}
+            >
+              <LinkIcon className="mr-2 h-4 w-4" />
+              View
+            </Link>
+          </Button>
+        ) : null}
+        {/* Case Study */}
+        {project?.slug ? (
+          <Button variant="outline" asChild>
+            <Link
+              href={`/projects/${project.slug}`}
+              aria-label={`View ${project.title} Case Study`}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              Case Study
             </Link>
           </Button>
         ) : null}
 
-        {project?.liveUrl ? (
+        {/* GitHub */}
+        {project.githubUrl ? (
           <Button variant="outline" asChild>
-            <Link target="_blank" href={project.liveUrl} aria-label={`View ${project.title} Live Demo`}>
-              <LinkIcon className="mr-2 h-4 w-4" />
-              View
+            <Link
+              target="_blank"
+              href={project.githubUrl}
+              aria-label={`View ${project.title} on GitHub`}
+            >
+              <Github className="mr-2 h-4 w-4" />
+              Github
             </Link>
           </Button>
         ) : null}
