@@ -1,3 +1,5 @@
+import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 import { navbar } from "@/constants/navbar";
 import { Button } from "../ui/button";
 import { smoothScrollToSection } from "@/utils/smooth-scroll-to-section";
@@ -6,6 +8,17 @@ import { useIsMobileScreen } from "@/hooks/use-is-mobile-screen";
 
 export function NavbarDesktop() {
   const isMobileScreen = useIsMobileScreen();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleNavClick = (section: string) => {
+    const sectionId = section.toLowerCase();
+    if (pathname === "/") {
+      smoothScrollToSection(sectionId, { offset: 72 });
+    } else {
+      router.push(`/#${sectionId}`);
+    }
+  };
 
   if (isMobileScreen) return null;
 
@@ -16,13 +29,18 @@ export function NavbarDesktop() {
           key={item}
           variant="ghost"
           className="text-primary hover:underline"
-          onClick={() =>
-            smoothScrollToSection(item.toLowerCase(), { offset: 72 })
-          }
+          onClick={() => handleNavClick(item)}
         >
           {item}
         </Button>
       ))}
+      <Button
+        variant="ghost"
+        className="text-primary hover:underline"
+        asChild
+      >
+        <Link href="/blogs">Blog</Link>
+      </Button>
       <ThemeButton />
     </div>
   );

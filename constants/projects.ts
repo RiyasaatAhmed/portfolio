@@ -36,23 +36,27 @@ export const projects: Project[] = [
     githubUrl: PORTFOLIO_GITHUB,
     slug: "portfolio",
     details: {
-      tagline: "A performance-first, accessible developer portfolio built with Next.js.",
-      overview: "This portfolio is intentionally built as a production-grade web application rather than a static resume. It serves as a living case study of how I approach frontend engineering—balancing performance, accessibility, scalability, and visual polish. Every interaction, animation, and layout decision reflects real-world constraints and best practices used in modern SaaS products.",
-      challenge: "The main challenge was delivering a visually engaging experience without sacrificing performance or accessibility. Motion-heavy interfaces often introduce layout shifts, excessive re-renders, or CPU bottlenecks, while custom UI components can easily fall short of accessibility standards if not designed carefully.",
-      solution: "I used Next.js to leverage server-side rendering and static generation for fast initial loads, strong SEO, and predictable performance. Animations were implemented with Framer Motion using hardware-accelerated transforms to maintain smooth 60fps interactions without layout thrashing. Accessibility was treated as a core requirement from the start, with semantic HTML, proper ARIA roles, keyboard navigation, and continuous auditing to ensure screen reader compatibility and WCAG compliance.",
+      tagline: "A production-grade, accessible developer portfolio built with Next.js App Router, Framer Motion, and MDX.",
+      overview: "This portfolio is more than just a resume, it's a comprehensive demonstration of modern frontend engineering. It balances high-end visual design with rigorous performance, accessibility, and SEO standards. Built on the Next.js App Router, it features a fully custom MDX blog system, dynamic case studies, and a highly interactive user interface, serving as a real-world example of scalable web application architecture.",
+      challenge: "The primary challenge was integrating complex, motion-heavy features like 3D skills visualization and fluid page transitions without compromising on Core Web Vitals or accessibility. Additionally, building a custom blog with syntax highlighting and ensuring the site ranks for competitive developer keywords (SEO) required a deep dive into Next.js metadata API and semantic HTML structure.",
+      solution: "I utilized React Server Components (RSC) to keep the initial bundle size low while delivering rich interactive experiences via Client Components. Framer Motion and Magic UI were used for hardware-accelerated animations. For content, I built a custom file-based CMS using MDX and `rehype-pretty-code` for server-side syntax highlighting. I also implemented a robust SEO strategy including dynamic sitemaps, Open Graph images, and JSON-LD structured data.",
       technologies: [
-        "Next.js",
+        "Next.js (App Router)",
         "TypeScript",
         "Tailwind CSS",
         "Framer Motion",
-        "shadcn/ui"
+        "MDX & Gray Matter",
+        "Shadcn/ui & Magic UI",
+        "Lucide React"
       ],
       features: [
-        "Dynamic, file-based case study routing",
-        "Consistent 100 Lighthouse scores across performance, accessibility, and SEO",
-        "Fully responsive layouts with keyboard and screen reader support",
-        "System-aware dark and light mode with persistent user preference",
-        "Reusable interactive UI components inspired by modern SaaS design patterns"
+        "Custom MDX Blog with syntax highlighting",
+        "Dynamic, file-based Case Study system",
+        "Performance-optimized animations (Framer Motion)",
+        "3D Skills Cloud visualization",
+        "System-aware Dark/Light mode",
+        "Advanced SEO (Sitemap, Robots.txt, Metadata)",
+        "Fully accessible components (WCAG compliant)"
       ],
     },
   },
@@ -78,7 +82,7 @@ export const projects: Project[] = [
   {
     thumbnail: "/images/projects/xeno-wulf.jpg",
     title: "Xeno Wulf",
-    description: "Welcome to Xenowulf, where we don't just build servers and workstations — we engineer gateways to the future of artificial intelligence.",
+    description: "Welcome to Xenowulf, where we don't just build servers and workstations, we engineer gateways to the future of artificial intelligence.",
     liveUrl: XENO_WULF,
   },
   {

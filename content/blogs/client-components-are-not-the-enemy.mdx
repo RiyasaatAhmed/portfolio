@@ -1,0 +1,208 @@
+---
+title: "Client Components Are Not the Enemy"
+summary: "When and How to Use Them Correctly: An opinionated, practical guide to using Client Components in Next.js without hurting performance."
+publishedAt: "2025-01-25"
+tags: ["Next.js", "React", "Client Components", "Performance"]
+---
+
+## Introduction
+
+Client Components have gained an unfair reputation in the Next.js ecosystem.
+
+Some developers treat them as a failure.
+Others try to eliminate them entirely.
+
+Both approaches are wrong.
+
+Client Components are **not the enemy** but misuse is.
+
+This article explains **when Client Components are necessary, when they are harmful, and how to use them intentionally in production-grade Next.js applications**.
+
+---
+
+## What Client Components Actually Are
+
+A Client Component is simply a React component that:
+- Runs in the browser
+- Can use hooks like `useState`, `useEffect`, `useRef`
+- Can access browser-only APIs
+
+```ts
+"use client";
+
+export function Counter() {
+  const [count, setCount] = useState(0);
+
+  return <button onClick={() => setCount(c => c + 1)}>{count}</button>;
+}
+```
+
+They are not new.
+What’s new is that **they are no longer the default**.
+
+---
+
+## The Real Cost of Client Components
+
+Client Components:
+- Increase JavaScript sent to the browser
+- Add hydration cost
+- Can cascade client boundaries unintentionally
+
+This does **not** mean you should avoid them.
+It means you should **place them carefully**.
+
+---
+
+## When Client Components Are the Right Choice
+
+I use Client Components when I need:
+
+- Interactivity (clicks, toggles, modals)
+- Local UI state
+- Browser APIs (`window`, `localStorage`)
+- Animations and transitions
+- Real-time updates
+
+Example: A modal.
+
+```tsx
+"use client";
+
+export function Modal({ children }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open</button>
+      {open && <div>{children}</div>}
+    </>
+  );
+}
+```
+
+Trying to make this a Server Component would be artificial and harmful.
+
+---
+
+## When Client Components Become a Problem
+
+Client Components cause issues when:
+
+- They wrap entire pages unnecessarily
+- They fetch data that could be fetched on the server
+- They are used “just in case”
+
+Bad pattern:
+
+```tsx
+"use client";
+
+export default function Page() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/posts").then(res => res.json()).then(setData);
+  }, []);
+}
+```
+
+Better pattern:
+
+```tsx
+export default async function Page() {
+  const data = await getPosts();
+
+  return <PostsClient data={data} />;
+}
+```
+
+---
+
+## The Boundary Pattern I Follow
+
+My rule is simple:
+
+> **Server Components fetch and prepare data**  
+> **Client Components handle interaction**
+
+Example:
+
+```tsx
+// Server Component
+export async function Page() {
+  const posts = await getPosts();
+
+  return <PostsList posts={posts} />;
+}
+```
+
+```tsx
+// Client Component
+"use client";
+
+export function PostsList({ posts }) {
+  const [filter, setFilter] = useState("");
+
+  return (
+    <>
+      <input onChange={e => setFilter(e.target.value)} />
+      {posts.filter(p => p.title.includes(filter)).map(...)}
+    </>
+  );
+}
+```
+
+This keeps:
+- JavaScript minimal
+- Components reusable
+- Architecture clean
+
+---
+
+## Client Components and Performance
+
+Client Components are not slow by default.
+
+Performance problems usually come from:
+- Over-fetching
+- Over-rendering
+- Poor boundaries
+
+Use:
+- `React.memo` when necessary
+- `useTransition` for expensive updates
+- Dynamic imports for heavy components
+
+Avoid premature optimization.
+
+---
+
+## Common Myths (Debunked)
+
+**Myth:** Client Components are bad  
+**Reality:** Unnecessary Client Components are bad
+
+**Myth:** Everything should be a Server Component  
+**Reality:** Interactive UIs require the client
+
+**Myth:** Client Components kill SEO  
+**Reality:** Server Components control SEO, not client interactivity
+
+---
+
+## Final Thoughts
+
+Client Components are a **tool**, not a failure mode.
+
+If you treat them as:
+- UI-focused
+- Interaction-driven
+- Carefully scoped
+
+They become a strength, not a liability.
+
+The goal is not to eliminate Client Components,
+but to **use them deliberately**.
+
+Happy building 👋

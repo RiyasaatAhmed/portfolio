@@ -1,0 +1,148 @@
+---
+title: "A Practical Guide to Server Actions in Next.js"
+summary: "A real-world, opinionated guide to using Server Actions in Next.js, when to use them, when not to, and how to structure them in production."
+publishedAt: "2025-01-25"
+tags: ["Next.js", "React", "Server Actions", "Fullstack"]
+---
+
+## Introduction
+
+Server Actions are one of the most impactful additions to Next.js in recent years and also one of the most misunderstood.
+
+They promise:
+- Fewer API routes
+- Less boilerplate
+- Better security by default
+
+But in real-world applications, **misusing Server Actions can quickly lead to poor structure, tight coupling, and hard-to-test code**.
+
+This article is not a basic introduction.  
+It’s a **practical guide** based on how I actually use Server Actions in production Next.js apps.
+
+---
+
+## What Server Actions Actually Are (Without the Marketing)
+
+At their core, **Server Actions are just async functions that run on the server and can be invoked from the client**.
+
+```ts
+"use server";
+
+export async function createPost(formData: FormData) {
+  // runs on the server
+}
+```
+
+What makes them powerful is:
+- They never ship to the browser
+- They can directly access databases, secrets, and internal services
+- They integrate seamlessly with React forms and transitions
+
+What makes them dangerous:
+- They can blur boundaries if you’re not disciplined
+
+---
+
+## When I Use Server Actions
+
+I use Server Actions for **mutations that are tightly coupled to UI interactions**.
+
+### Good use cases:
+- Form submissions
+- Button-triggered mutations
+- Simple CRUD operations
+- Authenticated user actions
+
+Example: Creating a comment.
+
+```ts
+"use server";
+
+import { db } from "@/lib/db";
+import { auth } from "@/lib/auth";
+
+export async function createComment(formData: FormData) {
+  const user = await auth();
+  if (!user) throw new Error("Unauthorized");
+
+  const content = formData.get("content") as string;
+
+  await db.comment.create({
+    data: {
+      content,
+      userId: user.id,
+    },
+  });
+}
+```
+
+---
+
+## When I Do Not Use Server Actions
+
+I **do not** use Server Actions when:
+
+- The logic is shared across multiple clients (mobile, external APIs)
+- I need versioning
+- I need public endpoints
+- The logic is complex business logic
+
+**Server Actions are not a backend replacement.**
+
+---
+
+## Folder Structure That Scales
+
+```
+app/
+  actions/
+    comment.actions.ts
+    post.actions.ts
+  components/
+```
+
+---
+
+## Handling Errors Properly
+
+```ts
+"use server";
+
+export async function updateProfile(data: ProfileInput) {
+  if (!data.name) {
+    throw new Error("Name is required");
+  }
+}
+```
+
+---
+
+## Security Considerations
+
+Always:
+- Validate authentication
+- Validate input
+- Never trust client-provided data
+
+---
+
+## Server Actions vs API Routes
+
+| Use Case | Server Actions | API Routes |
+|--------|----------------|------------|
+| Form submission | ✅ | ❌ |
+| Public API | ❌ | ✅ |
+| Shared logic | ❌ | ✅ |
+| Simple mutations | ✅ | ❌ |
+| Mobile client | ❌ | ✅ |
+
+---
+
+## Final Thoughts
+
+Server Actions are powerful, but only when used intentionally.
+
+> **UI-driven mutations → Server Actions**  
+> **Everything else → APIs or services**
+
+Happy building 👋
