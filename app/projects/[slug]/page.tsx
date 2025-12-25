@@ -31,6 +31,7 @@ export async function generateMetadata(props: {
   return {
     title: `${project.title} | Case Study`,
     description: project.details?.tagline || project.description,
+    keywords: project.details?.technologies || [],
     openGraph: {
       title: project.title,
       description: project.details?.tagline || project.description,

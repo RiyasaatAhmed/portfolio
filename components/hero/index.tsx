@@ -23,7 +23,8 @@ export function Hero() {
           <div className="flex-1 text-center md:text-left space-y-8">
             <Text />
             <p className="text-xl md:text-2xl text-muted-foreground">
-              Crafting beautiful digital experiences with modern technologies
+              Senior Frontend Developer specializing in React.js, Next.js and
+              modern web technologies.
             </p>
 
             <Magnet padding={5} disabled={false} magnetStrength={5}>
