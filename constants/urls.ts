@@ -11,7 +11,7 @@ export const RECOMMENDATIONS =
 export const INTRO_VIDEO_URL =
   "https://www.loom.com/share/50412a464ba64e98a3e0d95f165a7173";
 export const CV_URL =
-  "https://drive.google.com/file/d/17aoIqlG7snY7LBcKXg3RyYgObbubDe8X/view";
+  "https://drive.google.com/file/d/1q243M3m8xtQkAqRzGCkGA5S5POGRTS0h/view";
 
 // Companies
 export const POOL_OFFICE_MANAGER_URL = "https://poolofficemanager.com/";
@@ -31,5 +31,4 @@ export const PORTFOLIO = "https://riyasaat.dev/";
 
 // Repositories
 export const PORTFOLIO_GITHUB = "https://github.com/RiyasaatAhmed/portfolio";
-export const HCC_PLATFORM_URL = "https://github.com/hcc-platform";
-export const RADV_PLATFORM_URL = "https://github.com/radv-platform";
+
