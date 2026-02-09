@@ -100,6 +100,7 @@ export function Hero() {
                       width={400}
                       height={400}
                       loading="eager"
+                      fetchPriority="high"
                     />
                   </picture>
                 </div>
