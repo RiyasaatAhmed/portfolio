@@ -47,5 +47,11 @@
   },
   "devDependencies": {
     "postcss-nesting": "^13.0.1"
-  }
+  },
+  "browserslist": [
+    "chrome >= 87",
+    "firefox >= 78",
+    "edge >= 88",
+    "safari >= 14"
+  ]
 }
