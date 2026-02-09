@@ -14,15 +14,6 @@ export const metadata: Metadata = {
   title: "Riyasaat Ahmed | React.js, Next.js & Frontend Developer",
   description:
     "Portfolio of Riyasaat Ahmed, a Senior Frontend Developer specializing in React.js and Next.js. Building scalable, high-performance web solutions with TypeScript and modern UI practices.",
-  keywords: [
-    "React.js Developer",
-    "Next.js Developer",
-    "Frontend Developer",
-    "Web Developer",
-    "TypeScript Expert",
-    "React Native",
-    "Software Engineer",
-  ],
   openGraph: {
     title: "Riyasaat Ahmed | React.js, Next.js & Frontend Developer",
     description:
