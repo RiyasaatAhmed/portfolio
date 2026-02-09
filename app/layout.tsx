@@ -63,8 +63,9 @@ export default function RootLayout({
       "image": `${PORTFOLIO}/images/hero.jpg`,
       "url": PORTFOLIO,
       "sameAs": [
-        "https://github.com/riyasaat",
-        "https://linkedin.com/in/riyasaat",
+        "https://www.linkedin.com/in/riyasaatahmedrahul/",
+        "https://github.com/RiyasaatAhmed",
+        "https://stackoverflow.com/users/14693582/riyasaat-ahmed-rahul"
         // Add other social links if known, otherwise these are safe bets or placeholders if actual URLs aren't in context. 
         // NOTE: I will omit specific social links I don't know for sure to avoid broken links, relying on what's in the app or PORTFOLIO.
         // Actually, checking `constants/urls.ts` might have revealed them, but for now I will stick to what I know or generic.

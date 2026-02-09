@@ -1,6 +1,5 @@
 import { Github, Linkedin, Video, FileText } from "lucide-react";
 import { Button } from "../ui/button";
-import Image from "next/image";
 import Link from "next/link";
 import HireMe from "./hire-me";
 import { StackOverflowIcon } from "../icons/stack-over-flow";
@@ -13,6 +12,7 @@ import {
 } from "@/constants/urls";
 import { Text } from "./text";
 import { Magnet } from "../ui/magnet";
+
 
 export function Hero() {
   return (
@@ -89,17 +89,19 @@ export function Hero() {
             </div>
             <div className="group relative w-full h-full">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-500 animate-gradient p-[1px]">
-                <div className="w-full h-full rounded-full bg-background">
-                  <Image
-                    src={"/images/hero.jpg"}
-                    alt="Riyasaat Ahmed Profile"
-                    width={400}
-                    height={400}
-                    className="rounded-full w-full h-full object-cover"
-                    placeholder="blur"
-                    blurDataURL="/images/hero-blur.jpg"
-                    priority
-                  />
+                <div className="w-full h-full rounded-full bg-background overflow-hidden">
+                  <picture>
+                    <source srcSet="/images/hero.avif" type="image/avif" />
+                    <source srcSet="/images/hero.webp" type="image/webp" />
+                    <img
+                      src="/images/hero.jpg"
+                      alt="Riyasaat Ahmed - Frontend Developer"
+                      className="object-cover rounded-full w-full h-full"
+                      width={400}
+                      height={400}
+                      loading="eager"
+                    />
+                  </picture>
                 </div>
               </div>
             </div>

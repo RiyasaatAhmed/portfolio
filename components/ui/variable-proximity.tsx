@@ -6,7 +6,6 @@ import {
   RefObject,
   HTMLAttributes,
 } from "react";
-import { motion } from "framer-motion";
 
 type Callback = () => void;
 
@@ -178,7 +177,7 @@ export const VariableProximity = forwardRef<
       ref={ref}
       className={`${className} variable-proximity`}
       onClick={onClick}
-      style={{ display: "inline", ...style }}
+      style={{ display: "inline-block", ...style }}
       {...restProps}
     >
       {words.map((word, wordIndex) => (
@@ -189,7 +188,7 @@ export const VariableProximity = forwardRef<
           {word.split("").map((letter) => {
             const currentLetterIndex = letterIndex++;
             return (
-              <motion.span
+              <span
                 key={currentLetterIndex}
                 ref={(el) => {
                   letterRefs.current[currentLetterIndex] = el;
@@ -197,12 +196,13 @@ export const VariableProximity = forwardRef<
                 style={{
                   display: "inline-block",
                   fontVariationSettings:
-                    interpolatedSettingsRef.current[currentLetterIndex],
+                    interpolatedSettingsRef.current[currentLetterIndex] ||
+                    fromFontVariationSettings,
                 }}
                 aria-hidden="true"
               >
                 {letter}
-              </motion.span>
+              </span>
             );
           })}
           {wordIndex < words.length - 1 && (
