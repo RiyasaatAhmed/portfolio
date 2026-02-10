@@ -49,9 +49,9 @@
     "postcss-nesting": "^13.0.1"
   },
   "browserslist": [
-    "chrome >= 87",
-    "firefox >= 78",
-    "edge >= 88",
-    "safari >= 14"
+    "chrome >= 93",
+    "firefox >= 92",
+    "edge >= 93",
+    "safari >= 15.4"
   ]
 }
