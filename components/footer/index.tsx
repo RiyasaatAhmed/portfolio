@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="py-8 border-t bg-background/50">
+    <footer className="relative py-8 bg-background/50 border-t overflow-hidden">
+      <div className="absolute top-0 left-1/2 w-full max-w-7xl -translate-x-1/2 h-[1px] bg-gradient-to-r from-transparent via-primary/5 dark:via-primary/10 to-transparent" />
+      <div className="absolute top-0 left-1/2 w-full max-w-3xl -translate-x-1/2 h-[1px] bg-gradient-to-r from-transparent via-primary/10 dark:via-primary/20 to-transparent" />
+      <div className="absolute top-0 left-1/2 w-3/4 max-w-4xl -translate-x-1/2 h-[40px] bg-primary/[0.02] dark:bg-primary/[0.03] blur-[100px] -translate-y-1/2 pointer-events-none rounded-full" />
       <div className="container mx-auto px-4 text-center text-primary">
         <p>© {new Date().getFullYear()} Riyasaat Ahmed. All rights reserved.</p>
         <p className="mt-2">

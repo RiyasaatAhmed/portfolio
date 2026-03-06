@@ -8,7 +8,7 @@ export function Text() {
   return (
     <h1 ref={containerRef} style={{ position: "relative" }}>
       <VariableProximity
-        label={"Frontend React Developer"}
+        label={"React Architect"}
         className={
           "text-5xl lg:text-6xl font-bold text-gradient animate-gradient"
         }
