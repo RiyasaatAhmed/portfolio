@@ -12,11 +12,16 @@ import {
 } from "@/constants/urls";
 import { Text } from "./text";
 import { Magnet } from "../ui/magnet";
-
+import { Spotlight } from "../ui/spotlight";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 grid-background container mx-auto px-4">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 grid-background container mx-auto px-4">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         <div className="flex-1 text-center md:text-left space-y-8">
           <Text />
